@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тысяча. — Learn Russian Vocabulary</title>
+<meta name="description" content="1000 carefully curated Russian words. Spaced repetition. Example sentences. One file, no subscription. $7.99">
+<meta property="og:title" content="Тысяча. — Learn Russian Vocabulary">
+<meta property="og:description" content="1000 words. Speak 80% of daily conversations. Spaced repetition, 1000 example sentences, 10-week study plan. One file, no subscription. $7.99">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://louisonpatinet-hub.github.io/tysyacha">
+<meta property="og:image" content="https://louisonpatinet-hub.github.io/tysyacha/tysyacha-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Тысяча. — Learn Russian Vocabulary">
+<meta name="twitter:description" content="1000 words. Speak 80% of daily conversations. One file, no subscription. $7.99">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080808;
+  --surface: #101010;
+  --surface2: #181818;
+  --border: rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.11);
+  --text: #f0ece4;
+  --muted: #6e6a64;
+  --hint: #3a3835;
+  --accent: #f5b731;
+  --accent-dim: rgba(245,183,49,0.09);
+  --green: #5dbe82;
+  --radius: 8px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── NOISE TEXTURE ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: .4;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: .5; }
+  50%       { opacity: 1; }
+}
+
+.reveal { opacity: 0; animation: fadeUp .7s ease forwards; }
+.reveal:nth-child(1) { animation-delay: .1s; }
+.reveal:nth-child(2) { animation-delay: .22s; }
+.reveal:nth-child(3) { animation-delay: .34s; }
+.reveal:nth-child(4) { animation-delay: .46s; }
+.reveal:nth-child(5) { animation-delay: .58s; }
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(8,8,8,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--border);
+}
+.nav-logo {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -.01em;
+  text-decoration: none;
+}
+.nav-logo span { color: var(--accent); }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: var(--accent);
+  color: #080808;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity .15s, transform .15s;
+}
+.nav-cta:hover { opacity: .88; transform: translateY(-1px); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 5rem;
+  position: relative;
+}
+
+/* Radial glow behind hero */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(245,183,49,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(52px, 9vw, 96px);
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -.03em;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 3.5rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 32px;
+  background: var(--accent);
+  color: #080808;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity .15s, transform .15s, box-shadow .15s;
+  box-shadow: 0 0 40px rgba(245,183,49,0.2);
+}
+.btn-primary:hover {
+  opacity: .92;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 40px rgba(245,183,49,0.3);
+}
+
+.btn-secondary {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: .06em;
+  transition: color .15s;
+}
+.btn-secondary:hover { color: var(--text); }
+
+.hero-proof {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.proof-item {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.proof-item::before {
+  content: '✓';
+  color: var(--green);
+  font-size: 10px;
+}
+
+/* ── THE CLAIM ── */
+.claim-section {
+  padding: 7rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.claim-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(80px, 15vw, 160px);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -.04em;
+  margin-bottom: .5rem;
+  opacity: .9;
+}
+.claim-label {
+  font-size: clamp(18px, 3vw, 26px);
+  color: var(--text);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.claim-desc {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  width: 100%;
+  height: 0.5px;
+  background: var(--border);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── FEATURES ── */
+.features-section {
+  padding: 7rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.feature {
+  background: var(--bg);
+  padding: 2rem;
+  transition: background .15s;
+}
+.feature:hover { background: var(--surface); }
+.feature-icon {
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+.feature-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .5rem;
+  letter-spacing: -.01em;
+}
+.feature-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── WORD PREVIEW ── */
+.preview-section {
+  padding: 7rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.preview-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: .75rem;
+  letter-spacing: -.02em;
+}
+.preview-sub {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+.word-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 6px;
+  margin-bottom: 1.5rem;
+}
+.word-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+.word-ru {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 2px;
+  font-family: 'DM Sans', sans-serif;
+}
+.word-en { font-size: 11px; color: var(--muted); }
+.word-tr { font-size: 10px; color: var(--accent); margin-top: 2px; font-family: 'JetBrains Mono', monospace; }
+.word-ex { font-size: 11px; color: var(--hint); margin-top: 6px; padding-top: 6px; border-top: 0.5px solid var(--border); line-height: 1.4; }
+.preview-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ── HOW IT WORKS ── */
+.how-section {
+  padding: 7rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.how-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 3rem;
+  letter-spacing: -.02em;
+}
+.steps { display: flex; flex-direction: column; gap: 0; }
+.step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  border-bottom: 0.5px solid var(--border);
+  align-items: start;
+}
+.step:last-child { border-bottom: none; }
+.step-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+  border: 0.5px solid rgba(245,183,49,0.3);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.step-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+  letter-spacing: -.01em;
+}
+.step-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ── INSIDE THE BOX ── */
+.inside-section {
+  padding: 7rem 2rem;
+  background: var(--surface);
+  border-top: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
+}
+.inside-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.inside-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 1rem;
+  letter-spacing: -.02em;
+}
+.inside-desc {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+.inside-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.inside-list li {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.inside-list li::before {
+  content: '→';
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.inside-list li strong { color: var(--text); }
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.stat-cell {
+  background: var(--bg);
+  padding: 1.5rem;
+  text-align: center;
+}
+.stat-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 4px;
+}
+.stat-lbl { font-size: 11px; color: var(--muted); }
+
+/* ── HONEST SECTION ── */
+.honest-section {
+  padding: 7rem 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.honest-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  letter-spacing: -.02em;
+}
+.honest-text {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 300;
+}
+.honest-text strong { color: var(--text); font-weight: 500; }
+
+/* ── PRICING ── */
+.pricing-section {
+  padding: 7rem 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.price-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border2);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+}
+.price-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+.price-amount {
+  font-family: 'DM Serif Display', serif;
+  font-size: 72px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -.04em;
+  margin-bottom: .25rem;
+}
+.price-amount sup {
+  font-size: 28px;
+  vertical-align: super;
+  letter-spacing: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+}
+.price-once {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  letter-spacing: .06em;
+}
+.price-includes {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.price-includes li {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.price-includes li::before {
+  content: '✓';
+  color: var(--green);
+  font-size: 11px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', monospace;
+}
+.price-includes li strong { color: var(--text); }
+.price-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: var(--accent);
+  color: #080808;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity .15s, transform .15s, box-shadow .15s;
+  box-shadow: 0 0 40px rgba(245,183,49,0.18);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.price-btn:hover {
+  opacity: .9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 40px rgba(245,183,49,0.28);
+}
+.price-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--hint);
+  letter-spacing: .04em;
+}
+
+/* ── FAQ ── */
+.faq-section {
+  padding: 7rem 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.faq-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+  letter-spacing: -.02em;
+}
+.faq-item { border-bottom: 0.5px solid var(--border); padding: 1.5rem 0; }
+.faq-q {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: .6rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq-q::after {
+  content: '+';
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.faq-a { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 0.5px solid var(--border);
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-logo {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.footer-logo span { color: var(--accent); }
+.footer-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--hint);
+  letter-spacing: .04em;
+}
+
+/* ── SOCIAL PROOF ── */
+.proof-section {
+  padding: 5rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.proof-band { width: 100%; }
+.proof-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  position: relative;
+}
+.proof-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 2.5rem; right: 2.5rem;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+.proof-stars {
+  color: var(--accent);
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+.proof-quote {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--text);
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+.proof-author {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: .04em;
+}
+.proof-meta {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.proof-meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+.proof-meta-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.proof-meta-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.proof-meta-divider {
+  width: 0.5px;
+  height: 36px;
+  background: var(--border2);
+}
+@media (max-width: 600px) {
+  .proof-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .proof-meta-divider { display: none; }
+  .proof-meta-val { font-size: 20px; }
+}
+@media (max-width: 480px) {
+  .proof-card { padding: 1.5rem; }
+  .proof-meta-item { padding: 0 1rem; }
+  .proof-meta-val { font-size: 18px; }
+  .proof-card [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  .proof-card [style*="flex-direction:column"] { flex-direction: row !important; justify-content: center; }
+}
+
+/* ── SCROLL REVEAL ── */
+.sr {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.sr.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sr-delay-1 { transition-delay: .1s; }
+.sr-delay-2 { transition-delay: .2s; }
+.sr-delay-3 { transition-delay: .3s; }
+.sr-delay-4 { transition-delay: .4s; }
+
+/* ── FAQ TOGGLE ── */
+.faq-a {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, opacity .35s ease, padding .35s ease;
+  opacity: 0;
+  padding-top: 0;
+}
+.faq-item.open .faq-a {
+  max-height: 200px;
+  opacity: 1;
+  padding-top: .6rem;
+}
+.faq-q::after {
+  transition: transform .25s ease;
+}
+.faq-item.open .faq-q::after {
+  transform: rotate(45deg);
+}
+
+/* ── APP MOCKUP ── */
+.mockup-section {
+  padding: 7rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mockup-section .section-label { margin-bottom: 1.5rem; }
+.mockup-section h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: .75rem;
+  letter-spacing: -.02em;
+}
+.mockup-section p {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+.mockup-frame {
+  background: var(--surface);
+  border: 0.5px solid var(--border2);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 0.5px var(--border);
+}
+.mockup-bar {
+  background: #0e0e0e;
+  border-bottom: 0.5px solid var(--border);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mockup-bar-logo {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+}
+.mockup-bar-logo span { color: var(--accent); }
+.mockup-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+}
+.mockup-progress {
+  width: 80px;
+  height: 2px;
+  background: #222;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.mockup-progress-fill {
+  height: 100%;
+  width: 18%;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.mockup-tabs {
+  background: var(--surface);
+  border-bottom: 0.5px solid var(--border);
+  display: flex;
+  padding: 0 16px;
+  overflow-x: auto;
+}
+.mockup-tab {
+  padding: 10px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  border-bottom: 1.5px solid transparent;
+}
+.mockup-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.mockup-body {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-height: 280px;
+  justify-content: center;
+}
+.mockup-card {
+  width: 100%;
+  max-width: 380px;
+  background: #131313;
+  border: 0.5px solid var(--border2);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: border-color .2s, background .2s;
+}
+
+/* Demo animations */
+@keyframes demoFadeUp {
+  from { opacity:0; transform:translateY(10px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes demoRatingsIn {
+  from { opacity:0; transform:translateY(8px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes demoTabIn {
+  from { opacity:0; transform:translateY(6px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.demo-card-enter { animation: demoFadeUp .3s cubic-bezier(.4,0,.2,1) forwards; }
+.demo-ratings-enter { animation: demoRatingsIn .3s cubic-bezier(.4,0,.2,1) .12s both; }
+.demo-tab-enter { animation: demoTabIn .25s ease forwards; }
+
+/* Flip animation for demo card */
+.demo-flip-scene { width:100%; max-width:100%; }
+.demo-flipper {
+  position:relative;
+  width:100%;
+  transform-style:preserve-3d;
+  transition:transform .4s cubic-bezier(.4,0,.2,1);
+}
+.demo-flipper.flipped { transform:rotateY(180deg); }
+.demo-flip-face {
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  background:#131313;
+  border:0.5px solid var(--border2);
+  border-radius:10px;
+  padding:1.25rem;
+  text-align:center;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition:border-color .2s;
+  width:100%;
+}
+.demo-flip-face.demo-flip-back {
+  position:absolute; inset:0;
+  transform:rotateY(180deg);
+  cursor:default;
+}
+.demo-flipper.flipped .demo-flip-front { pointer-events:none; }
+
+.mockup-rating {
+  flex: 1;
+  padding: 10px 4px;
+  border-radius: 6px;
+  border: 0.5px solid var(--border2);
+  background: var(--surface);
+  text-align: center;
+  cursor: pointer;
+  transition: transform .12s, opacity .12s;
+}
+.mockup-rating:hover { transform: translateY(-2px); opacity: .85; }
+.mockup-rating-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 2px;
+}
+.mockup-rating-interval {
+  font-size: 9px;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+.mockup-rating.r0 { border-color: var(--red); }
+.mockup-rating.r0 .mockup-rating-label { color: var(--red); }
+.mockup-rating.r1 { border-color: #d4a06a; }
+.mockup-rating.r1 .mockup-rating-label { color: #d4a06a; }
+.mockup-rating.r2 { border-color: #666; }
+.mockup-rating.r2 .mockup-rating-label { color: #aaa; }
+.mockup-rating.r3 { border-color: var(--green); }
+.mockup-rating.r3 .mockup-rating-label { color: var(--green); }
+.mockup-progress-bar {
+  width: 100%;
+  max-width: 380px;
+}
+.mockup-pb-track {
+  height: 3px;
+  background: #222;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.mockup-pb-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  width: 35%;
+}
+.mockup-pb-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+/* ── PERSONAL STORY ── */
+.story-section {
+  padding: 7rem 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+  border-top: 0.5px solid var(--border);
+}
+.story-quote {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  font-style: italic;
+  letter-spacing: -.01em;
+}
+.story-quote::before {
+  content: '"';
+  color: var(--accent);
+  font-size: 1.2em;
+  line-height: 0;
+  vertical-align: -.2em;
+  margin-right: 4px;
+}
+.story-body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.story-body strong { color: var(--text); font-weight: 500; }
+.story-sig {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--hint);
+  letter-spacing: .06em;
+}
+
+/* ── FINAL CTA BANNER ── */
+.final-cta {
+  padding: 7rem 2rem;
+  text-align: center;
+  background: var(--surface);
+  border-top: 0.5px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(245,183,49,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.final-cta h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -.03em;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+.final-cta p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+@media (max-width: 700px) {
+  .inside-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  nav { padding: 1rem; }
+  .hero { padding: 7rem 1.5rem 4rem; }
+  .word-demo { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .word-demo { grid-template-columns: 1fr 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://tysyacha.gumroad.com/l/dhhyga" class="nav-logo">Тысяча<span>.</span></a>
+  <a href="#pricing" class="nav-cta">Get it — $7.99</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow reveal">Russian Vocabulary Trainer</div>
+  <h1 class="hero-title reveal">
+    1000 words.<br><em>Speak 80% of daily conversations.</em>
+  </h1>
+  <p class="hero-sub reveal">
+    The vocabulary that actually moves the needle — curated, structured, and built around spaced repetition. One file. No account. No subscription.
+  </p>
+  <div class="hero-actions reveal">
+    <a href="#pricing" class="btn-primary">
+      Тысяча. — $7.99
+    </a>
+    
+    <a href="#how" class="btn-secondary"></a>
+  </div>
+  <div class="hero-proof reveal">
+    <div class="proof-item">1000 curated words</div>
+    <div class="proof-item">1000 example sentences</div>
+    <div class="proof-item">SM-2 spaced repetition</div>
+    <div class="proof-item">Works offline</div>
+    <div class="proof-item">One-time payment</div>
+  </div>
+</section>
+
+<!-- THE CLAIM -->
+<div class="divider"></div>
+<section class="claim-section">
+  <div class="claim-number">80%</div>
+  <div class="claim-label">of everyday Russian conversation</div>
+  <p class="claim-desc">
+    Linguists agree: the most frequent 1000 words cover roughly 80% of spoken language. You don't need to know everything — you need to know the right things. Тысяча is built around that insight.
+  </p>
+</section>
+<div class="divider"></div>
+
+<!-- SOCIAL PROOF -->
+<section class="proof-section sr">
+  <div class="proof-band">
+    <div class="proof-card">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem">About this product</div>
+      <div style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start">
+        <div>
+          <div style="font-size:clamp(16px,2.2vw,21px);font-weight:400;color:var(--text);line-height:1.5;font-family:'DM Serif Display',serif;font-style:italic;margin-bottom:.75rem">Built by one person.<br>Tested for 10 weeks.<br>Trusted by early learners.</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.7">No team, no marketing budget, no VC funding. Just an honest tool built to solve a real problem — and refined until it actually worked.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="background:var(--surface2);border-radius:var(--radius);padding:10px 20px;text-align:center;white-space:nowrap">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:var(--accent)">10</div>
+            <div style="font-size:10px;color:var(--muted);margin-top:2px;font-family:'JetBrains Mono',monospace">weeks tested</div>
+          </div>
+          <div style="background:var(--surface2);border-radius:var(--radius);padding:10px 20px;text-align:center;white-space:nowrap">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:var(--accent)">20min</div>
+            <div style="font-size:10px;color:var(--muted);margin-top:2px;font-family:'JetBrains Mono',monospace">per day</div>
+          </div>
+          <div style="background:var(--surface2);border-radius:var(--radius);padding:10px 20px;text-align:center;white-space:nowrap">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:var(--accent)">$0</div>
+            <div style="font-size:10px;color:var(--muted);margin-top:2px;font-family:'JetBrains Mono',monospace">per month</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="proof-meta">
+    <div class="proof-meta-item"><span class="proof-meta-val">1000</span><span class="proof-meta-lbl">curated words</span></div>
+    <div class="proof-meta-divider"></div>
+    <div class="proof-meta-item"><span class="proof-meta-val">1000</span><span class="proof-meta-lbl">example sentences</span></div>
+    <div class="proof-meta-divider"></div>
+    <div class="proof-meta-item"><span class="proof-meta-val">80%</span><span class="proof-meta-lbl">daily conversations</span></div>
+    <div class="proof-meta-divider"></div>
+    <div class="proof-meta-item"><span class="proof-meta-val">$7.99</span><span class="proof-meta-lbl">one-time · forever</span></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <div class="section-label">What's inside</div>
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon">✦</div>
+      <div class="feature-title">Spaced repetition (SM-2)</div>
+      <div class="feature-desc">The algorithm used by Anki — but built in. Rate each word and the app schedules your next review at the perfect moment. 1 day → 6 days → 13 days → months.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💬</div>
+      <div class="feature-title">1000 example sentences</div>
+      <div class="feature-desc">Every word shown in context. Every new word in each sentence is glossed — so you never get stuck on an unfamiliar word while trying to learn another.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔤</div>
+      <div class="feature-title">Alphabet tab with audio</div>
+      <div class="feature-desc">33 Cyrillic letters organised by difficulty. Click any letter to hear it. Includes the traps — letters that look Latin but sound different.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📋</div>
+      <div class="feature-title">4-choice & typing quiz</div>
+      <div class="feature-desc">Multiple choice for daily warm-ups. Typing mode for serious drilling. Russian → English and English → Russian. Weak words tracked automatically.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📅</div>
+      <div class="feature-title">10-week study plan</div>
+      <div class="feature-desc">Words organised by week and frequency. Milestone screens after each week. Show/podcast recommendations matched to your level — week by week.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📦</div>
+      <div class="feature-title">One file. Forever yours.</div>
+      <div class="feature-desc">A single HTML file that runs in any browser. No internet required after download. No account. No server. Your progress saved locally — export and import anytime.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WORD PREVIEW -->
+<section class="preview-section">
+  <div class="section-label">Sample words</div>
+  <h2 class="preview-title">Every word. In context.</h2>
+  <p class="preview-sub">Click any card in the app to mark it as known. Flip it to see the example sentence and new word glosses.</p>
+  <div class="word-demo">
+    <div class="word-card">
+      <div class="word-ru">идти</div>
+      <div class="word-en">to go (on foot)</div>
+      <div class="word-tr">itti</div>
+      <div class="word-ex">Куда ты идёшь? — Where are you going?</div>
+    </div>
+    <div class="word-card">
+      <div class="word-ru">понимать</div>
+      <div class="word-en">to understand</div>
+      <div class="word-tr">panimat</div>
+      <div class="word-ex">Извини, я не понимаю. — Sorry, I don't understand.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-ru">сейчас</div>
+      <div class="word-en">now</div>
+      <div class="word-tr">sychas</div>
+      <div class="word-ex">Сейчас не очень удобно. — Now is not a great time.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-ru">хотеть</div>
+      <div class="word-en">to want</div>
+      <div class="word-tr">khatyet</div>
+      <div class="word-ex">Я хочу стакан воды. — I want a glass of water.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-ru">работа</div>
+      <div class="word-en">work / job</div>
+      <div class="word-tr">rabota</div>
+      <div class="word-ex">После работы я иду домой. — After work I go home.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-ru">всё-таки</div>
+      <div class="word-en">after all / still</div>
+      <div class="word-tr">fsyo-taki</div>
+      <div class="word-ex">Всё-таки ты пришёл! — You came after all!</div>
+    </div>
+  </div>
+  <p class="preview-note">…and 994 more, across 10 weeks. <span style="color:var(--hint)">↑ Click any card to mark it as known.</span></p>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="section-label">The method</div>
+  <h2 class="how-title">Simple daily habit.<br>Real results.</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">Learn the alphabet first</div>
+        <div class="step-desc">Most people can read Cyrillic within a few days. The Alphabet tab guides you letter by letter with audio and memory tips.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">Open Review every day</div>
+        <div class="step-desc">Your daily session introduces 20 new words and brings back words you've seen before — at exactly the right moment. 10–15 minutes.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">Rate yourself honestly</div>
+        <div class="step-desc">Blackout → Wrong → Hard → Easy. The algorithm adjusts your schedule based on how you rate each word. The more honest you are, the better it works.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-title">By week 10, 1000 words</div>
+        <div class="step-desc">The spaced repetition keeps working long after you've been introduced to all the words. They keep coming back until they're locked in.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE THE BOX -->
+<section class="inside-section">
+  <div class="inside-inner">
+    <div>
+      <div class="section-label">By the numbers</div>
+      <h2 class="inside-title">Everything in one file.</h2>
+      <p class="inside-desc">No app to install. No server to trust. Just a file on your desktop that works as long as your browser does.</p>
+      <ul class="inside-list">
+        <li><strong>1000 words</strong> — curated by frequency, not alphabet</li>
+        <li><strong>1000 example sentences</strong> — every new word glossed</li>
+        <li><strong>41 categories</strong> — across 10 weeks</li>
+        <li><strong>33 Cyrillic letters</strong> — with audio</li>
+        <li><strong>SM-2 algorithm</strong> — the gold standard in spaced repetition</li>
+        <li><strong>Progress export</strong> — your data, your backup</li>
+      </ul>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-cell">
+        <span class="stat-val">1000</span>
+        <span class="stat-lbl">words</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-val">1000</span>
+        <span class="stat-lbl">sentences</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-val">80%</span>
+        <span class="stat-lbl">comprehension</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-val">10</span>
+        <span class="stat-lbl">weeks</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP MOCKUP -->
+<section class="mockup-section sr">
+  <div class="section-label">The app</div>
+  <h2>Try it right here.</h2>
+  <p>A live preview — all 7 tabs, real content, fully interactive.</p>
+  <div class="mockup-frame">
+    <div class="mockup-bar">
+      <div class="mockup-bar-logo">Тысяча<span>.</span></div>
+      <div class="mockup-bar-right">
+        <span id="demo-learned">0</span><span style="color:#3a3835">/1000</span>
+        <div class="mockup-progress"><div class="mockup-progress-fill" id="demo-prog-fill" style="width:0%"></div></div>
+        <span>🔊</span>
+      </div>
+    </div>
+    <div class="mockup-tabs" id="demo-tabs">
+      <div class="mockup-tab" onclick="demoShowTab('list',this)">Word list</div>
+      <div class="mockup-tab" onclick="demoShowTab('flashcards',this)">Flashcards</div>
+      <div class="mockup-tab" onclick="demoShowTab('quiz',this)">Quiz</div>
+      <div class="mockup-tab active" onclick="demoShowTab('review',this)">Review ✦</div>
+      <div class="mockup-tab" onclick="demoShowTab('alphabet',this)">Alphabet</div>
+      <div class="mockup-tab" onclick="demoShowTab('progress',this)">Progress</div>
+      <div class="mockup-tab" onclick="demoShowTab('plan',this)">Study plan</div>
+    </div>
+    <div class="mockup-body" id="demo-body" style="min-height:320px;padding:20px;"></div>
+  </div>
+  <p style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hint);text-align:center;margin-top:1rem;letter-spacing:.04em">↑ Live preview — click any tab to explore</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- PERSONAL STORY -->
+<section class="story-section sr">
+  <div class="section-label">Why this exists</div>
+  <div class="story-quote">
+    I wanted to learn Russian. Everything I found was either a subscription trap or a gamified toy. So I built the tool I wished existed.<span style="color:var(--accent)">"</span>
+  </div>
+  <p class="story-body">
+    I left a finance career in Paris to open a hostel in Laos. Along the way I wanted to learn Russian — and couldn't find a tool that was honest about what it was. <strong>Тысяча is the thing I wished existed.</strong> No gamification. No subscription. Just the 1000 words that matter, and the algorithm that makes them stick.
+  </p>
+  <div class="story-sig">— Louison, Luang Prabang</div>
+  <a href="#pricing" style="display:inline-block;margin-top:1.5rem;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.06em;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">See what's inside →</a>
+</section>
+
+<!-- HONEST SECTION -->
+<section class="honest-section">
+  <h2 class="honest-title">What this won't do.</h2>
+  <p class="honest-text">
+    Тысяча won't make you fluent. <strong>No vocabulary trainer will.</strong> Fluency requires grammar, reading, conversation, and years of exposure. What Тысяча does is give you the vocabulary foundation — the 1000 words you need before anything else makes sense. <strong>Think of it as the first serious step.</strong> Not the whole journey.
+  </p>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section sr">
+  <div class="section-label">Questions</div>
+  <h2 class="faq-title">FAQ</h2>
+  <div class="faq-item">
+    <div class="faq-q">What exactly do I get?</div>
+    <div class="faq-a">A single HTML file (~240KB) that you download and open in any browser. It contains everything — all 1000 words, the spaced repetition algorithm, flashcards, quiz, alphabet guide, and study plan. No internet connection required after download.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Will my progress be saved?</div>
+    <div class="faq-a">Yes — progress is saved in your browser's local storage. As long as you open the file in the same browser and don't clear your browser data, your progress persists. You can also export your progress as a JSON file and import it later or on another machine.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Does audio work?</div>
+    <div class="faq-a">Audio uses your browser's built-in text-to-speech. It works best on macOS Safari and Chrome. On some systems the Russian voice may not be available — the app shows a notice and falls back gracefully. You can mute audio at any time.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">I already know some Russian. Is this useful?</div>
+    <div class="faq-a">Yes — the word list tab lets you filter by week and toggle words you already know with a single click. The spaced repetition will then focus on the words you actually need to learn.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What if I don't like it?</div>
+    <div class="faq-a">Gumroad offers refunds within 30 days of purchase, no questions asked. Just reply to your purchase email and request one.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is this a subscription?</div>
+    <div class="faq-a">No. One payment, one file, yours forever. No account, no renewal, no server that can go offline. The file will work as long as browsers support HTML.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What browser should I use?</div>
+    <div class="faq-a">Any modern browser works — Chrome, Safari, Firefox, Edge. For the best audio experience, macOS Safari gives the highest quality Russian voice. On Windows, Chrome works well. On some systems the Russian voice may not be installed by default — the app detects this and shows a notice, but all features except audio work fully regardless.</div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="section-label">Pricing</div>
+  <div class="price-card">
+    <div class="price-label" style="font-family:'DM Serif Display',serif;font-size:16px;letter-spacing:normal;text-transform:none;font-weight:400;color:var(--text)">Тысяча<span style="color:var(--accent)">.</span></div>
+    <div class="price-amount"><sup>$</sup>7.99</div>
+    <div class="price-once">one-time · no subscription · yours forever</div>
+    <ul class="price-includes">
+      <li><strong>1000 words</strong> with transliterations and audio</li>
+      <li><strong>1000 example sentences</strong> with word-by-word glosses</li>
+      <li><strong>SM-2 spaced repetition</strong> — Review tab</li>
+      <li><strong>Flashcards + Quiz</strong> (4-choice and typing modes)</li>
+      <li><strong>Alphabet tab</strong> with audio</li>
+      <li><strong>10-week study plan</strong> with show recommendations</li>
+      <li><strong>Progress export/import</strong> — your data stays yours</li>
+      <li><strong>Works offline</strong> — no internet required</li>
+    </ul>
+    <a href="https://tysyacha.gumroad.com/l/dhhyga" class="price-btn" style="text-align:center;display:flex;align-items:center;justify-content:center;">Buy now — $7.99</a>
+    <div class="price-note">Instant download · Single HTML file · Works in any browser</div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta sr">
+  <h2>Start learning Russian today.</h2>
+  <p>One file. One payment. 1000 words.</p>
+  <a href="https://tysyacha.gumroad.com/l/dhhyga" class="btn-primary" style="display:inline-flex">
+    Тысяча. — $7.99
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Тысяча<span>.</span></div>
+  <div class="footer-note">Made with intent · No subscription · No account</div>
+</footer>
+
+<script>
+// ── SCROLL REVEAL ──
+const srObserver = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) {
+      el.target.classList.add('visible');
+      srObserver.unobserve(el.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.sr').forEach(el => srObserver.observe(el));
+
+// Add sr to major sections dynamically
+document.querySelectorAll('.claim-section, .features-section, .preview-section, .how-section, .inside-section, .honest-section, .pricing-section').forEach(el => {
+  el.classList.add('sr');
+  srObserver.observe(el);
+});
+
+// ── FAQ TOGGLE ──
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// ── FULL INTERACTIVE DEMO ──────────────────────────────
+
+const DEMO_WORDS = [
+  { ru:'говорить', tr:'gavarit',  en:'to speak',       ex:'Он говорит слишком быстро.',   ex_en:'He speaks too fast.' },
+  { ru:'понимать', tr:'panimat',  en:'to understand',  ex:'Извини, я не понимаю.',        ex_en:"Sorry, I don't understand." },
+  { ru:'хотеть',   tr:'khatyet',  en:'to want',        ex:'Я хочу стакан воды.',          ex_en:'I want a glass of water.' },
+  { ru:'знать',    tr:'znat',     en:'to know',        ex:'Ты знаешь этот ресторан?',     ex_en:'Do you know this restaurant?' },
+  { ru:'идти',     tr:'itti',     en:'to go',          ex:'Куда ты идёшь?',               ex_en:'Where are you going?' },
+  { ru:'делать',   tr:'dyelat',   en:'to do / make',   ex:'Что ты делаешь сегодня?',      ex_en:'What are you doing today?' },
+  { ru:'любить',   tr:'lyubit',   en:'to love / like', ex:'Я люблю путешествовать.',      ex_en:'I love to travel.' },
+  { ru:'жить',     tr:'zhit',     en:'to live',        ex:'Я живу в маленьком городе.',   ex_en:'I live in a small town.' },
+];
+
+const DEMO_ALPHA = [
+  { up:'А', lo:'а', sound:'A',  desc:'Like "a" in "father"' },
+  { up:'Б', lo:'б', sound:'B',  desc:'Like "b" in "book"' },
+  { up:'В', lo:'в', sound:'V',  desc:'Like "v" in "voice"' },
+  { up:'Г', lo:'г', sound:'G',  desc:'Like "g" in "go"' },
+  { up:'Д', lo:'д', sound:'D',  desc:'Like "d" in "door"' },
+  { up:'Е', lo:'е', sound:'YE', desc:'Like "ye" in "yes"' },
+  { up:'Ж', lo:'ж', sound:'ZH', desc:'Like "s" in "measure"' },
+  { up:'З', lo:'з', sound:'Z',  desc:'Like "z" in "zone"' },
+  { up:'И', lo:'и', sound:'EE', desc:'Like "ee" in "see"' },
+  { up:'К', lo:'к', sound:'K',  desc:'Like "k" in "kitten"' },
+  { up:'Л', lo:'л', sound:'L',  desc:'Like "l" in "lamp"' },
+  { up:'М', lo:'м', sound:'M',  desc:'Like "m" in "map"' },
+];
+
+let demoTab = 'review';
+let demoRevIdx = 0, demoRevFlipped = false;
+let demoFCIdx = 0, demoFCFlipped = false;
+let demoLearnedSet = new Set();
+let demoQAnswered = false, demoQWord = null, demoQOpts = [];
+let demoQCorrect = 0, demoQWrong = 0;
+
+function demoUpdateHeader() {
+  const n = demoLearnedSet.size;
+  const el = document.getElementById('demo-learned');
+  const fill = document.getElementById('demo-prog-fill');
+  if (el) el.textContent = n;
+  if (fill) fill.style.width = (n / 1000 * 100) + '%';
+}
+
+function demoShowTab(tab, btn) {
+  demoTab = tab;
+  document.querySelectorAll('#demo-tabs .mockup-tab').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  const body = document.getElementById('demo-body');
+  if (body) { body.classList.remove('demo-tab-enter'); void body.offsetWidth; body.classList.add('demo-tab-enter'); }
+  demoRender();
+}
+
+function demoRender() {
+  const body = document.getElementById('demo-body');
+  if (!body) return;
+  if (demoTab === 'review')     renderDemoReview(body);
+  else if (demoTab === 'flashcards') renderDemoFC(body);
+  else if (demoTab === 'quiz')  renderDemoQuiz(body);
+  else if (demoTab === 'list')  renderDemoList(body);
+  else if (demoTab === 'alphabet') renderDemoAlpha(body);
+  else if (demoTab === 'progress') renderDemoProgress(body);
+  else if (demoTab === 'plan')  renderDemoPlan(body);
+}
+
+// ── REVIEW ──
+function renderDemoReview(body) {
+  if (demoRevIdx >= DEMO_WORDS.length) {
+    body.innerHTML = `
+      <div style="display:flex;flex-direction:column;align-items:center;gap:14px;padding:1.5rem 0;width:100%">
+        <div class="mockup-card demo-card-enter" style="border-color:var(--green);text-align:center;cursor:default;width:100%">
+          <div style="font-size:26px;margin-bottom:8px">✓</div>
+          <div style="font-size:15px;font-weight:500;color:var(--text);margin-bottom:6px">Session complete!</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)">You reviewed ${DEMO_WORDS.length} words. The full app has 1000.</div>
+        </div>
+        <button onclick="demoRevIdx=0;demoRevFlipped=false;renderDemoReview(document.getElementById('demo-body'))" style="background:none;border:0.5px solid rgba(255,255,255,0.11);border-radius:6px;padding:8px 20px;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px;cursor:pointer;transition:all .15s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='';this.style.color=''">↺ start again</button>
+      </div>`;
+    return;
+  }
+  const w = DEMO_WORDS[demoRevIdx];
+  const pct = Math.round((demoRevIdx / DEMO_WORDS.length) * 100);
+  body.innerHTML = `
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;width:100%">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);width:100%;text-align:left">Card ${demoRevIdx+1} of ${DEMO_WORDS.length}</div>
+      <div style="width:100%;height:3px;background:#1a1a1a;border-radius:2px;overflow:hidden">
+        <div style="height:100%;width:${pct}%;background:var(--accent);border-radius:2px;transition:width .4s"></div>
+      </div>
+      <div style="background:#131313;border:0.5px solid var(--border2);border-radius:10px;padding:1.25rem;text-align:center;width:100%;cursor:${demoRevFlipped?'default':'pointer'};transition:border-color .2s" onclick="${demoRevFlipped?'':'demoRevFlip()'}" id="demo-rev-card">
+        <div style="font-size:32px;font-weight:300;color:var(--text);font-family:'DM Sans',sans-serif">${w.ru}</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#d9a030;margin-top:6px">${w.tr}</div>
+        ${demoRevFlipped ? `
+          <div style="font-size:15px;color:var(--muted);margin-top:10px" class="demo-card-enter">${w.en}</div>
+          <div style="font-size:11px;color:#3a3835;margin-top:8px;padding-top:8px;border-top:0.5px solid rgba(255,255,255,0.06);line-height:1.5" class="demo-card-enter">💬 ${w.ex}<br><span style="font-size:10px">${w.ex_en}</span></div>
+        ` : `<div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--hint);margin-top:14px;letter-spacing:.04em">tap to reveal</div>`}
+      </div>
+      ${demoRevFlipped ? `
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--hint);text-transform:uppercase;letter-spacing:.1em" class="demo-card-enter">How well did you know it?</div>
+        <div style="display:flex;gap:6px;width:100%" class="demo-ratings-enter">
+          <div class="mockup-rating r0" onclick="demoRevRate()" style="cursor:pointer;flex:1"><span class="mockup-rating-label">Blackout</span><span class="mockup-rating-interval">2.4h</span></div>
+          <div class="mockup-rating r1" onclick="demoRevRate()" style="cursor:pointer;flex:1"><span class="mockup-rating-label">Wrong</span><span class="mockup-rating-interval">12h</span></div>
+          <div class="mockup-rating r2" onclick="demoRevRate()" style="cursor:pointer;flex:1"><span class="mockup-rating-label">Hard</span><span class="mockup-rating-interval">1d</span></div>
+          <div class="mockup-rating r3" onclick="demoRevRate()" style="cursor:pointer;flex:1"><span class="mockup-rating-label">Easy</span><span class="mockup-rating-interval">6d</span></div>
+        </div>` : ''}
+    </div>`;
+}
+function demoRevFlip() {
+  if (!demoRevFlipped) {
+    demoRevFlipped = true;
+    renderDemoReview(document.getElementById('demo-body'));
+  }
+}
+function demoRevRate() {
+  demoRevIdx++;
+  demoRevFlipped = false;
+  renderDemoReview(document.getElementById('demo-body'));
+}
+
+// ── FLASHCARDS ──
+function renderDemoFC(body) {
+  const w = DEMO_WORDS[demoFCIdx % DEMO_WORDS.length];
+  const learned = demoLearnedSet.has(w.ru);
+  body.innerHTML = `
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;width:100%" class="demo-tab-enter">
+      <div id="dfc-card" onclick="demoFCFlip()" style="background:#131313;border:0.5px solid ${learned?'var(--green)':'var(--border2)'};${learned?'background:rgba(93,190,130,0.06);':''}border-radius:10px;padding:1.5rem;text-align:center;width:100%;cursor:pointer;transition:border-color .2s,background .2s">
+        <div id="dfc-word" style="font-size:32px;font-weight:300;color:${learned?'var(--green)':'var(--text)'};font-family:'DM Sans',sans-serif;transition:color .2s">${w.ru}</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#d9a030;margin-top:4px">${w.tr}</div>
+        <div id="dfc-hint" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--hint);margin-top:14px;letter-spacing:.04em;transition:opacity .2s">${demoFCFlipped?'':'tap to reveal'}</div>
+        <div id="dfc-back" style="transition:opacity .25s,transform .25s;opacity:${demoFCFlipped?1:0};transform:translateY(${demoFCFlipped?0:6}px);pointer-events:none">
+          ${demoFCFlipped ? `
+            <div style="font-size:16px;color:var(--muted);margin-top:10px">${w.en}</div>
+            <div style="font-size:11px;color:#3a3835;margin-top:10px;padding-top:10px;border-top:0.5px solid rgba(255,255,255,0.06);line-height:1.5">💬 ${w.ex}<br><span style="font-size:10px">${w.ex_en}</span></div>
+          ` : ''}
+        </div>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)">Card ${(demoFCIdx%DEMO_WORDS.length)+1} of ${DEMO_WORDS.length}</div>
+      <div style="display:flex;gap:7px;flex-wrap:wrap;justify-content:center">
+        <button onclick="demoFCPrev()" style="padding:7px 14px;font-family:'JetBrains Mono',monospace;font-size:11px;border:0.5px solid rgba(255,255,255,0.11);border-radius:6px;background:none;color:var(--muted);cursor:pointer;transition:border-color .15s,color .15s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='';this.style.color=''">← prev</button>
+        <button id="dfc-toggle" onclick="demoFCToggle()" style="padding:7px 14px;font-family:'JetBrains Mono',monospace;font-size:11px;border:0.5px solid ${learned?'var(--green)':'rgba(255,255,255,0.11)'};border-radius:6px;background:none;color:${learned?'var(--green)':'var(--muted)'};cursor:pointer;transition:all .2s">${learned?'known ✓':'I know this'}</button>
+        <button onclick="demoFCNext()" style="padding:7px 14px;font-family:'JetBrains Mono',monospace;font-size:11px;border:0.5px solid rgba(255,255,255,0.11);border-radius:6px;background:none;color:var(--muted);cursor:pointer;transition:border-color .15s,color .15s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='';this.style.color=''">next →</button>
+      </div>
+    </div>`;
+}
+
+function demoFCFlip() {
+  demoFCFlipped = !demoFCFlipped;
+  const card = document.getElementById('dfc-card');
+  const hint = document.getElementById('dfc-hint');
+  const back = document.getElementById('dfc-back');
+  if (!card) { renderDemoFC(document.getElementById('demo-body')); return; }
+  const w = DEMO_WORDS[demoFCIdx % DEMO_WORDS.length];
+  if (demoFCFlipped) {
+    if (hint) hint.style.opacity = '0';
+    setTimeout(() => {
+      if (back) {
+        back.innerHTML = `
+          <div style="font-size:16px;color:var(--muted);margin-top:10px">${w.en}</div>
+          <div style="font-size:11px;color:#3a3835;margin-top:10px;padding-top:10px;border-top:0.5px solid rgba(255,255,255,0.06);line-height:1.5">💬 ${w.ex}<br><span style="font-size:10px">${w.ex_en}</span></div>`;
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          back.style.opacity = '1';
+          back.style.transform = 'translateY(0)';
+        }));
+      }
+    }, 150);
+  } else {
+    if (back) { back.style.opacity = '0'; back.style.transform = 'translateY(6px)'; }
+    setTimeout(() => { if (hint) hint.style.opacity = '1'; if (back) back.innerHTML = ''; }, 200);
+  }
+}
+
+function demoFCNext() {
+  demoFCIdx++;
+  demoFCFlipped = false;
+  const body = document.getElementById('demo-body');
+  body.style.opacity = '0';
+  body.style.transform = 'translateY(8px)';
+  body.style.transition = 'opacity .2s ease, transform .2s ease';
+  setTimeout(() => {
+    renderDemoFC(body);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      body.style.opacity = '1';
+      body.style.transform = 'translateY(0)';
+    }));
+  }, 180);
+}
+
+function demoFCPrev() {
+  demoFCIdx = Math.max(0, demoFCIdx - 1);
+  demoFCFlipped = false;
+  const body = document.getElementById('demo-body');
+  body.style.opacity = '0';
+  body.style.transform = 'translateY(8px)';
+  body.style.transition = 'opacity .2s ease, transform .2s ease';
+  setTimeout(() => {
+    renderDemoFC(body);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      body.style.opacity = '1';
+      body.style.transform = 'translateY(0)';
+    }));
+  }, 180);
+}
+
+function demoFCToggle() {
+  const w = DEMO_WORDS[demoFCIdx % DEMO_WORDS.length];
+  demoLearnedSet.has(w.ru) ? demoLearnedSet.delete(w.ru) : demoLearnedSet.add(w.ru);
+  const learned = demoLearnedSet.has(w.ru);
+  demoUpdateHeader();
+  // Update in place — no re-render
+  const card = document.getElementById('dfc-card');
+  const wordEl = document.getElementById('dfc-word');
+  const btn = document.getElementById('dfc-toggle');
+  if (card) { card.style.borderColor = learned ? 'var(--green)' : 'var(--border2)'; card.style.background = learned ? 'rgba(93,190,130,0.06)' : '#131313'; }
+  if (wordEl) wordEl.style.color = learned ? 'var(--green)' : 'var(--text)';
+  if (btn) { btn.style.borderColor = learned ? 'var(--green)' : 'rgba(255,255,255,0.11)'; btn.style.color = learned ? 'var(--green)' : 'var(--muted)'; btn.textContent = learned ? 'known ✓' : 'I know this'; }
+}
+
+// ── QUIZ ──
+function demoNewQuestion() {
+  demoQAnswered=false;
+  demoQWord=DEMO_WORDS[Math.floor(Math.random()*DEMO_WORDS.length)];
+  const wrong=DEMO_WORDS.filter(w=>w.ru!==demoQWord.ru).sort(()=>Math.random()-.5).slice(0,3);
+  demoQOpts=[{w:demoQWord,c:true},...wrong.map(w=>({w,c:false}))].sort(()=>Math.random()-.5);
+  renderDemoQuiz(document.getElementById('demo-body'));
+}
+function renderDemoQuiz(body) {
+  if (!demoQWord) { demoNewQuestion(); return; }
+  const optsHtml = demoQOpts.map((o,i) => {
+    return `<button id="dqo-${i}" onclick="demoQAnswer(${i})" style="padding:12px 8px;font-size:13px;font-family:'DM Sans',sans-serif;border-radius:6px;width:100%;text-align:center;transition:border-color .2s,background .2s,color .2s,transform .12s;border:0.5px solid rgba(255,255,255,0.11);background:#101010;color:var(--text);cursor:pointer" onmouseover="if(!${demoQAnswered})this.style.transform='translateY(-1px)'" onmouseout="this.style.transform=''">${o.w.en}</button>`;
+  }).join('');
+  body.innerHTML = `
+    <div style="display:flex;flex-direction:column;gap:10px;width:100%;max-width:420px;margin:0 auto" class="demo-tab-enter">
+      <div style="display:flex;gap:8px;justify-content:center">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 10px;border:0.5px solid rgba(255,255,255,0.11);border-radius:20px;color:var(--muted)">✓ <span style="color:var(--green)">${demoQCorrect}</span></span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 10px;border:0.5px solid rgba(255,255,255,0.11);border-radius:20px;color:var(--muted)">✗ <span style="color:var(--red)">${demoQWrong}</span></span>
+      </div>
+      <div style="font-size:34px;font-weight:300;color:var(--text);text-align:center;padding:1.5rem;background:#101010;border:0.5px solid rgba(255,255,255,0.08);border-radius:10px;font-family:'DM Sans',sans-serif">${demoQWord.ru}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">${optsHtml}</div>
+      <div id="dq-next" style="opacity:0;transition:opacity .3s ease;pointer-events:none">
+        <button onclick="demoNewQuestion()" style="padding:8px;width:100%;font-family:'JetBrains Mono',monospace;font-size:11px;border:0.5px solid var(--accent);border-radius:6px;background:none;color:var(--accent);cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(245,183,49,0.08)'" onmouseout="this.style.background='none'">next question →</button>
+      </div>
+    </div>`;
+}
+function demoQAnswer(i) {
+  if (demoQAnswered) return;
+  demoQAnswered = true;
+  // Update button colours in place — no re-render
+  demoQOpts.forEach((o, idx) => {
+    const btn = document.getElementById('dqo-' + idx);
+    if (!btn) return;
+    btn.style.cursor = 'default';
+    btn.onmouseover = null; btn.onmouseout = null;
+    btn.style.transform = '';
+    if (o.c) {
+      btn.style.borderColor = 'var(--green)';
+      btn.style.background = 'rgba(93,190,130,0.11)';
+      btn.style.color = 'var(--green)';
+    } else {
+      btn.style.borderColor = 'rgba(255,255,255,0.06)';
+      btn.style.background = 'transparent';
+      btn.style.color = 'var(--hint)';
+    }
+    btn.onclick = null;
+  });
+  if (demoQOpts[i].c) demoQCorrect++; else demoQWrong++;
+  // Fade in next button
+  const nxt = document.getElementById('dq-next');
+  if (nxt) {
+    nxt.style.pointerEvents = 'auto';
+    requestAnimationFrame(() => requestAnimationFrame(() => nxt.style.opacity = '1'));
+  }
+}
+
+// ── WORD LIST ──
+function renderDemoList(body) {
+  // More words — 3 categories to give a sense of breadth
+  const ALL_DEMO = [
+    // Week 1 — core verbs
+    {ru:'говорить',tr:'gavarit',en:'to speak',week:1,cat:'Core verbs'},
+    {ru:'понимать',tr:'panimat',en:'to understand',week:1,cat:'Core verbs'},
+    {ru:'хотеть',tr:'khatyet',en:'to want',week:1,cat:'Core verbs'},
+    {ru:'знать',tr:'znat',en:'to know',week:1,cat:'Core verbs'},
+    {ru:'идти',tr:'itti',en:'to go',week:1,cat:'Core verbs'},
+    {ru:'делать',tr:'dyelat',en:'to do',week:1,cat:'Core verbs'},
+    {ru:'любить',tr:'lyubit',en:'to love',week:1,cat:'Core verbs'},
+    {ru:'жить',tr:'zhit',en:'to live',week:1,cat:'Core verbs'},
+    // Week 2 — greetings
+    {ru:'привет',tr:'privyet',en:'hi',week:2,cat:'Greetings'},
+    {ru:'спасибо',tr:'spasiba',en:'thank you',week:2,cat:'Greetings'},
+    {ru:'пожалуйста',tr:'pazhalsta',en:'please',week:2,cat:'Greetings'},
+    {ru:'извините',tr:'izvinitye',en:'excuse me',week:2,cat:'Greetings'},
+    {ru:'как дела',tr:'kak dyela',en:'how are you',week:2,cat:'Greetings'},
+    {ru:'хорошо',tr:'kharasho',en:'good / well',week:2,cat:'Greetings'},
+    // Week 3 — food
+    {ru:'хлеб',tr:'khlyep',en:'bread',week:3,cat:'Food & drink'},
+    {ru:'вода',tr:'vada',en:'water',week:3,cat:'Food & drink'},
+    {ru:'кофе',tr:'kofe',en:'coffee',week:3,cat:'Food & drink'},
+    {ru:'чай',tr:'chay',en:'tea',week:3,cat:'Food & drink'},
+    {ru:'мясо',tr:'myasa',en:'meat',week:3,cat:'Food & drink'},
+    {ru:'рыба',tr:'ryba',en:'fish',week:3,cat:'Food & drink'},
+  ];
+  const weekFilter = demoListWeek || 'all';
+  const filtered = weekFilter === 'all' ? ALL_DEMO : ALL_DEMO.filter(w => w.week === parseInt(weekFilter));
+  const byWeek = {};
+  filtered.forEach(w => {
+    const k = `Week ${w.week} — ${w.cat}`;
+    if (!byWeek[k]) byWeek[k] = [];
+    byWeek[k].push(w);
+  });
+  const sections = Object.entries(byWeek).map(([label, words]) => {
+    const cards = words.map(w => {
+      const learned = demoLearnedSet.has(w.ru);
+      return `<div onclick="demoListToggle('${w.ru}')" style="background:#101010;border:0.5px solid ${learned?'var(--green)':'rgba(255,255,255,0.08)'};border-radius:6px;padding:9px 11px;cursor:pointer;transition:all .2s;${learned?'background:rgba(93,190,130,0.06);':''}">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:15px;color:${learned?'var(--green)':'var(--text)'};font-family:'DM Sans',sans-serif;font-weight:500;transition:color .2s">${w.ru}</div>
+          <span style="font-size:10px;opacity:.4">🔊</span>
+        </div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px">${w.en}</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#d9a030;margin-top:2px">${w.tr}</div>
+      </div>`;
+    }).join('');
+    return `
+      <div style="margin-bottom:14px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;padding-bottom:5px;border-bottom:0.5px solid rgba(245,183,49,0.15)">${label}</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:5px">${cards}</div>
+      </div>`;
+  }).join('');
+  const filterBtns = ['all','1','2','3'].map(f => {
+    const active = weekFilter === f;
+    const lbl = f === 'all' ? 'All weeks' : `Week ${f}`;
+    return `<button onclick="demoListWeek='${f}';renderDemoList(document.getElementById('demo-body'))" style="font-family:'JetBrains Mono',monospace;font-size:9px;padding:3px 10px;border:0.5px solid ${active?'var(--accent)':'rgba(255,255,255,0.11)'};border-radius:20px;background:none;color:${active?'var(--accent)':'var(--muted)'};cursor:pointer;transition:all .15s">${lbl}</button>`;
+  }).join('');
+  body.innerHTML = `
+    <div style="width:100%" class="demo-tab-enter">
+      <div style="display:flex;gap:5px;margin-bottom:12px;flex-wrap:wrap">${filterBtns}</div>
+      <div style="max-height:280px;overflow-y:auto;padding-right:4px">${sections}</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hint);text-align:center;margin-top:10px;letter-spacing:.04em">↑ Sample — full app has 1000 words across 10 weeks · click to mark as known</div>
+    </div>`;
+}
+let demoListWeek = 'all';
+function demoListToggle(ru) {
+  demoLearnedSet.has(ru) ? demoLearnedSet.delete(ru) : demoLearnedSet.add(ru);
+  demoUpdateHeader(); renderDemoList(document.getElementById('demo-body'));
+}
+
+// ── ALPHABET ──
+function renderDemoAlpha(body) {
+  const cards = DEMO_ALPHA.map(l => `
+    <div onclick="demoSpeak('${l.lo}')" style="background:#101010;border:0.5px solid rgba(255,255,255,0.08);border-radius:8px;padding:.75rem .5rem;text-align:center;cursor:pointer;transition:all .12s" onmouseover="this.style.borderColor='var(--accent)';this.style.background='rgba(245,183,49,0.06)'" onmouseout="this.style.borderColor='';this.style.background=''">
+      <div style="font-size:32px;font-weight:300;color:var(--text);font-family:'DM Sans',sans-serif;line-height:1">${l.up}</div>
+      <div style="font-size:18px;color:var(--muted);font-family:'DM Sans',sans-serif">${l.lo}</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#d9a030;margin:4px 0">${l.sound}</div>
+      <div style="font-size:9px;color:var(--hint);line-height:1.4">${l.desc}</div>
+    </div>`).join('');
+  body.innerHTML = `
+    <div style="width:100%">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:0.5px solid rgba(245,183,49,0.15)">First 12 letters — click to hear</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(95px,1fr));gap:5px">${cards}</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hint);text-align:center;margin-top:12px">Full app has all 33 Cyrillic letters with audio</div>
+    </div>`;
+}
+function demoSpeak(letter) {
+  if ('speechSynthesis' in window) {
+    const u = new SpeechSynthesisUtterance(letter);
+    u.lang='ru-RU'; u.rate=0.8; speechSynthesis.speak(u);
+  }
+}
+
+// ── PROGRESS ──
+function renderDemoProgress(body) {
+  const n = demoLearnedSet.size;
+  const pct = Math.round(n/1000*100);
+  const cats = [
+    {lbl:'Core verbs', total:8, col:'var(--accent)'},
+    {lbl:'Greetings', total:6, col:'var(--green)'},
+    {lbl:'Food & drink', total:6, col:'#7aaccc'},
+    {lbl:'Numbers', total:10, col:'#d4a06a'},
+    {lbl:'Family', total:8, col:'#d4746a'},
+  ];
+  const catBars = cats.map(c => {
+    const learned = Math.min(n, Math.floor(Math.random()*3));
+    const p = Math.round(learned/c.total*100);
+    return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:7px">
+      <div style="font-size:11px;color:var(--muted);min-width:90px;font-style:italic">${c.lbl}</div>
+      <div style="flex:1;height:3px;background:#222;border-radius:2px;overflow:hidden"><div style="height:100%;width:${p}%;background:${c.col};border-radius:2px;transition:width .4s"></div></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);min-width:28px;text-align:right">${p}%</div>
+    </div>`;
+  }).join('');
+  body.innerHTML = `
+    <div style="width:100%;display:flex;flex-direction:column;gap:10px" class="demo-tab-enter">
+      <div style="display:flex;gap:7px;flex-wrap:wrap">
+        ${[['🔥','0','day streak'],['📖',String(n),'words known'],['⏰','20','due today'],['✓',String(Math.round(n*0.8)),'est. comprehension']].map(([icon,val,lbl])=>`
+          <div style="flex:1;min-width:60px;background:#101010;border:0.5px solid rgba(255,255,255,0.08);border-radius:6px;padding:9px 6px;text-align:center">
+            <div style="font-size:13px;margin-bottom:2px">${icon}</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:500;color:var(--accent)">${val}</div>
+            <div style="font-size:9px;color:var(--muted);margin-top:2px">${lbl}</div>
+          </div>`).join('')}
+      </div>
+      <div style="background:#101010;border:0.5px solid rgba(255,255,255,0.08);border-radius:6px;padding:12px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Overall · Week 1</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="font-size:11px;color:var(--muted);min-width:90px">All 1000</div>
+          <div style="flex:1;height:3px;background:#222;border-radius:2px;overflow:hidden"><div style="height:100%;width:${pct}%;background:var(--accent);border-radius:2px;transition:width .4s"></div></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)">${pct}%</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="font-size:11px;color:var(--muted);min-width:90px">Week 1</div>
+          <div style="flex:1;height:3px;background:#222;border-radius:2px;overflow:hidden"><div style="height:100%;width:${Math.min(100,Math.round(n/8*100))}%;background:var(--green);border-radius:2px;transition:width .4s"></div></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)">${Math.min(100,Math.round(n/8*100))}%</div>
+        </div>
+      </div>
+      <div style="background:#101010;border:0.5px solid rgba(255,255,255,0.08);border-radius:6px;padding:12px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">By category (sample)</div>
+        ${catBars}
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hint);text-align:center">Mark words as known in Word list to see this update live</div>
+    </div>`;
+}
+
+// ── STUDY PLAN ──
+const DEMO_PLAN = [
+  {w:'Weeks 1–2', title:'The skeleton', col:'#c8a96e',
+   desc:'Pronouns, conjunctions, essential prepositions, core verbs, numbers 1–100. These alone unlock ~50% comprehension of natural speech.',
+   tips:['20 words/day via Review ✦','Start with Week 1 filter in Word list','📺 Смешарики — simple Russian animation, slow speech']},
+  {w:'Weeks 3–4', title:'Daily life', col:'#7aaccc',
+   desc:'Food, home, shopping, clothes, colours, family, emotions. You can navigate most basic real-life situations.',
+   tips:["Keep daily Review sessions — don't skip",'Use Quiz in Russian → English mode','📺 Улица Сезам — familiar content, simple vocabulary']},
+  {w:'Weeks 5–7', title:'Fluency expansion', col:'#6dbf8a',
+   desc:'Health, city, travel, work, nature, technology. You can handle most real conversations. Grammar patterns start to emerge.',
+   tips:['Try English → Russian quiz now — harder but more useful','Read simple headlines on ria.ru','🎧 RussianPod101 — themed episodes on daily life']},
+  {w:'Weeks 8–10', title:'Mastery layer', col:'#d4746a',
+   desc:'Abstract concepts, discourse connectors (зато, ведь, однако), complex verbs, advanced adjectives. These give you nuance.',
+   tips:['5 sentences/day using new discourse connectors','Record yourself speaking for 2 mins','🎧 Slow Russian podcast — native speaker, transcripts available']},
+];
+let demoPlanOpen = null;
+
+function renderDemoPlan(body) {
+  const blocks = DEMO_PLAN.map((p, i) => {
+    return `
+      <div style="background:#101010;border:0.5px solid rgba(255,255,255,0.08);border-left:2px solid ${p.col};border-radius:6px;overflow:hidden;transition:border-color .2s" id="dplan-${i}">
+        <div onclick="demoPlanToggle(${i})" style="padding:11px 13px;cursor:pointer;display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:${p.col};letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px">${p.w}</div>
+            <div style="font-size:13px;font-weight:600;color:var(--text)">${p.title}</div>
+          </div>
+          <span id="dplan-icon-${i}" style="font-family:'JetBrains Mono',monospace;font-size:16px;color:${p.col};transition:transform .3s ease;display:inline-block">+</span>
+        </div>
+        <div id="dplan-detail-${i}" style="max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .35s ease,padding .3s ease;opacity:0;padding:0 13px">
+          <div style="padding-bottom:13px;border-top:0.5px solid rgba(255,255,255,0.08);padding-top:10px">
+            <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:8px">${p.desc}</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--hint);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Tips & resources</div>
+            ${p.tips.map(t=>`<div style="font-size:11px;color:var(--muted);padding:3px 0 3px 12px;position:relative;line-height:1.5"><span style="position:absolute;left:0;color:var(--hint);font-family:'JetBrains Mono',monospace">→</span>${t}</div>`).join('')}
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+  body.innerHTML = `
+    <div style="display:flex;flex-direction:column;gap:6px;width:100%" class="demo-tab-enter">
+      ${blocks}
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hint);text-align:center;margin-top:4px">↑ Click any phase to expand · Full app includes all resources</div>
+    </div>`;
+  // Restore open state without re-render
+  if (demoPlanOpen !== null) _openPlanBlock(demoPlanOpen, false);
+}
+
+function demoPlanToggle(i) {
+  const isOpen = demoPlanOpen === i;
+  // Close current
+  if (demoPlanOpen !== null) _closePlanBlock(demoPlanOpen);
+  // Open new one if different
+  if (!isOpen) {
+    demoPlanOpen = i;
+    _openPlanBlock(i, true);
+  } else {
+    demoPlanOpen = null;
+  }
+}
+
+function _openPlanBlock(i, animate) {
+  const detail = document.getElementById(`dplan-detail-${i}`);
+  const icon = document.getElementById(`dplan-icon-${i}`);
+  const block = document.getElementById(`dplan-${i}`);
+  if (!detail) return;
+  // Measure natural height
+  detail.style.maxHeight = 'none';
+  const h = detail.scrollHeight;
+  detail.style.maxHeight = '0';
+  // Force reflow then animate
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    detail.style.maxHeight = h + 'px';
+    detail.style.opacity = '1';
+    detail.style.paddingTop = '';
+  }));
+  if (icon) icon.style.transform = 'rotate(45deg)';
+  if (block) block.style.borderColor = DEMO_PLAN[i].col;
+}
+
+function _closePlanBlock(i) {
+  const detail = document.getElementById(`dplan-detail-${i}`);
+  const icon = document.getElementById(`dplan-icon-${i}`);
+  const block = document.getElementById(`dplan-${i}`);
+  if (!detail) return;
+  detail.style.maxHeight = '0';
+  detail.style.opacity = '0';
+  if (icon) icon.style.transform = 'rotate(0deg)';
+  if (block) block.style.borderColor = 'rgba(255,255,255,0.08)';
+}
+
+// ── INIT ──
+demoShowTab('review', document.querySelector('#demo-tabs .mockup-tab:nth-child(4)'));
+
+document.querySelectorAll('.word-card').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.style.transition = 'border-color .15s, background .15s';
+  card.addEventListener('mouseenter', () => {
+    if (!card.classList.contains('known')) {
+      card.style.borderColor = 'rgba(245,183,49,0.3)';
+      card.style.background = '#141414';
+    }
+  });
+  card.addEventListener('mouseleave', () => {
+    if (!card.classList.contains('known')) {
+      card.style.borderColor = '';
+      card.style.background = '';
+    }
+  });
+  card.addEventListener('click', () => {
+    card.classList.toggle('known');
+    if (card.classList.contains('known')) {
+      card.style.borderColor = 'var(--green)';
+      card.style.background = 'rgba(93,190,130,0.08)';
+      card.querySelector('.word-ru').style.color = 'var(--green)';
+    } else {
+      card.style.borderColor = '';
+      card.style.background = '';
+      card.querySelector('.word-ru').style.color = '';
+    }
+  });
+});
+</script>
+</body>
+</html>
